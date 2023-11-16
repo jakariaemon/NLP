@@ -1,0 +1,14 @@
+TalkNet: Audio-visual active speaker detection Model. 
+It is an active speaker detection model to detect 'whether the face in the screen is speaking or not?
+ 
+Demo link (YouTube): https://youtu.be/AjdKeeDPtIY  
+Paper Link: https://arxiv.org/pdf/2107.06592.pdf  
+GitHub Link: https://github.com/TaoRuijie/TalkNet-ASD 
+•	To run this on windows we need to download FFmpeg and add path to system variable. 
+•	This can implement on both CPU and CUDA. If anyone want to interface using cpu, need to modify the code as following: 
+“demoTalkNet.py and talkNet.py file: modify all cuda into cpu. Then replace line 83 in talkNet.py into loadedState = torch.load(path,map_location=torch.device('cpu'))” 
+
+•	I found a issue on path joining in windows during interfacing. Change the following line accordingly on demoTalkNet.py  
+ 
+•	It has three recopies. It provides pretrained model for interfacing. This model is trained on Columbia ASD dataset VoxCeleb2 and LRS3. 
+•	It has also provided a training method  AVA-Active speaker dataset (300GB in size)
